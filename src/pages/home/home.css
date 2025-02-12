@@ -1,16 +1,20 @@
 .home{  
-    margin: 0;
+    margin:  0; 
     padding: 0;
     width: 100%;
     height: 100%;
-    background-color: #05161A;
+    background-color: #030d0f;
 } 
 
+#sobre{
+    padding-top:40px;
+}
+ 
 .home-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10rem 2.5rem;
+    padding: 7rem 2.5rem;
     width: 95%;
 }
 
@@ -25,8 +29,12 @@
     margin: 0;
 }
 
-.home-title2{
-    color: #0F969C;
+.home-title2{ 
+    background-image: linear-gradient(to right top, #05d0db, #6ebec41e );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black; 
 }
 
 .home-subtitle{
@@ -43,7 +51,7 @@
 }
 
 .home-btn-box{
-    margin-top: 30px;
+    margin-top: 30px; 
 }
  
 .foto-perfil{
@@ -53,3 +61,23 @@
     background-color: #9e9e9e;
 }
 
+.text-box-sobre{
+    width: 100%; 
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column; 
+}
+
+.title-sobre{
+    margin: 0;
+    font-size: 2.3rem;
+    letter-spacing: 1.9px;
+    font-weight: 600; 
+}
+
+.resume{   
+    width: 70%;
+    color: #cac8c8;
+    font-size: 1.8rem; 
+}

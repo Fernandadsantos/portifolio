@@ -1,11 +1,21 @@
 .header{
     height: 80px;
     width: 100%;
-    border-bottom: solid 1px #0F969C;  
+    border-bottom:  0.5px #0F969C;   
     display: flex;  
     justify-content: space-around;
     align-items: center;
     gap: 30%;
+    box-shadow: 0 0 10px 0 #0F969C;
+    position: fixed;
+    background-color: #030d0f; 
+    backdrop-filter: blur(5px); 
+    z-index: 1;
+}
+
+.logo{
+    letter-spacing: 2px;
+    font-weight: 500;
 }
 
 .menu-icon{  
@@ -21,36 +31,6 @@
 .header-title{
     letter-spacing: 1px;
 }
- 
-.dark-mode{ 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; 
-} 
-
-.dark-mode-btn{
-    background-color: "#fff";
-}
- 
-.modal{ 
-    text-align: center;  
-    backdrop-filter: blur(2px); 
-    height: 94%;  
-    margin-top: 85px;
-}
-
-#modal-modal-title { 
-    font-family: "Poppins", serif;
-    transition-duration: 0.5s;
-    font-size: 42px;  
-    cursor: pointer;
-}
-
-#modal-modal-title:hover{
-    transform: scale(1.3);
-    transition-duration: 0.5s;
-}
-
  
  
 
