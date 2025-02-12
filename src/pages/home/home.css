@@ -5,6 +5,46 @@
     height: 100%;
     background-color: #05161A;
 } 
+
+.home-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10rem 2.5rem;
+    width: 95%;
+}
+
+.home-container-text{
+    width: 50%;
+}
+ 
+.home-title, .home-title2{
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.8rem;
+    margin: 0;
+}
+
+.home-title2{
+    color: #0F969C;
+}
+
+.home-subtitle{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #828282;
+    margin: 0;
+}
+
+.home-text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.home-btn-box{
+    margin-top: 30px;
+}
  
 .foto-perfil{
     width: 350px;
@@ -12,3 +52,4 @@
     border-radius: 50%;
     background-color: #9e9e9e;
 }
+

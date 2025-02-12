@@ -8,14 +8,16 @@ function Home() {
   return (
     <div className="home">
       <Header />
-      <section>
-        <section>
+      <section className="home-container">
+        <section id="sobre" className="home-container-text">
           <div>
-            <h2>Olá, eu sou a</h2>
-            <h2>Fernanda</h2>
-            <p>Desenvolvedora Front-end</p>
+            <div className="home-text-box">
+              <h2 className="home-title">Olá, eu sou a</h2>
+              <h2 className="home-title2">Fernanda Santos</h2>
+              <p className="home-subtitle">Desenvolvedora Front-end</p>
+            </div>
           </div>
-          <Stack direction="row" spacing={2}>
+          <Stack direction="row" spacing={4} className="home-btn-box">
             <Button
               sx={{
                 backgroundColor: "#05161A",
@@ -45,6 +47,13 @@ function Home() {
         <section>
           <div className="foto-perfil"></div>
         </section>
+      </section>
+      <section>
+        <h3>Sobre</h3>
+        <p>
+          Sou graduanda em Sistemas de informação pela Universidade Federal de
+          Sergipe (UFS)
+        </p>
       </section>
     </div>
   );
