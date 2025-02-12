@@ -1,18 +1,36 @@
-import React, { useState } from "react";
-import { Box, Switch, Tab, Tabs } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
+import { Box, Tab, Tabs } from "@mui/material";
 import "./header.css";
 
 function Header() {
-  const [darkmode, setDarkmode] = useState<boolean>(true);
   const [tabFocus, setTabFocus] = useState<number>(0);
-  const style = {
-    color: "#fff",
-    fontWeight: "600",
-    letterSpacing: "2px",
-  };
+  const refs = useRef<Record<string, HTMLElement | null>>({});
+
+  const sections = [
+    { id: "sessao1", label: "Sobre" },
+    { id: "sessao2", label: "Habilidades" },
+    { id: "sessao3", label: "Projetos " },
+    { id: "sessao4", label: "Formação " },
+    { id: "sessao5", label: "Contato " },
+  ];
+
+  useEffect(() => {
+    sections.forEach(({ id }) => {
+      refs.current[id] = document.getElementById(id);
+    });
+  }, []);
 
   const changeTab = (event: React.SyntheticEvent, newValue: number) => {
     setTabFocus(newValue);
+    const section = refs.current[sections[newValue].id];
+
+    if (section) {
+      var yOffset = 0;
+      if (section?.attributes.item(0)?.value !== "sessao1") yOffset = -80;
+
+      const y = section.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
@@ -27,11 +45,9 @@ function Header() {
               textColor="inherit"
               TabIndicatorProps={{ sx: { backgroundColor: "#0F969C" } }}
             >
-              <Tab sx={style} label="Sobre" href="#sobre" />
-              <Tab sx={style} label="Habilidades" href="#Habilidades" />
-              <Tab sx={style} label="Projetos" href="#Projetos" />
-              <Tab sx={style} label="Formação" href="#Formacao" />
-              <Tab sx={style} label="Contato" href="#Contato" />
+              {sections.map((section, index) => (
+                <Tab key={section.id} label={section.label} />
+              ))}
             </Tabs>
           </Box>
         </div>

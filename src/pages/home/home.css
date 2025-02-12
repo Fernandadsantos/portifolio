@@ -4,32 +4,34 @@
     width: 100%;
     height: 100%;
     background-color: #030d0f;
+    box-sizing: border-box;
 } 
 
-#sobre{
-    padding-top:40px;
+#sobre{  
+    height: 100%; 
 }
  
-.home-container{
+.sobre-container{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 7rem 2.5rem;
-    width: 95%;
+    padding: 10rem 2.5rem; 
+    height: 300px;
+    width: 95%; 
 }
 
-.home-container-text{
-    width: 50%;
+.sobre-container-text{
+    width: 50%;   
 }
  
-.home-title, .home-title2{
+.sobre-title,  .title {
     font-size: 3rem;
     font-weight: 500;
     line-height: 3.8rem;
     margin: 0;
 }
 
-.home-title2{ 
+.title{ 
     background-image: linear-gradient(to right top, #05d0db, #6ebec41e );
     background-clip: text;
     -webkit-background-clip: text;
@@ -37,20 +39,20 @@
     color: black; 
 }
 
-.home-subtitle{
+.sobre-subtitle{
     font-size: 1.3rem;
     font-weight: 400;
     color: #828282;
     margin: 0;
 }
 
-.home-text-box{
+.sobre-text-box{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.home-btn-box{
+.sobre-btn-box{
     margin-top: 30px; 
 }
  
@@ -63,6 +65,7 @@
 
 .text-box-sobre{
     width: 100%; 
+    height: 360px;
     text-align: center;
     align-items: center;
     display: flex;
@@ -79,5 +82,29 @@
 .resume{   
     width: 70%;
     color: #cac8c8;
-    font-size: 1.8rem; 
+    font-size: 1.8rem;  
+}
+
+.h-section{   
+    padding-top: 60px; 
+}
+
+.title-sessao2{
+    display: flex;
+    justify-content: center;
+}
+
+.card-section{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 0 0;
+}
+ 
+.cards{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 85%;
+    gap: 30px;
 }
