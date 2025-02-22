@@ -4,15 +4,29 @@ import "./card.css";
 interface CardProps {
   src: string;
   alt: string;
+  widthImg?: number;
+  heightImg?: number;
+  widthCard?: number;
+  heightCard?: number;
+  opacity?: number;
+  background?: string;
 }
 
 function Card(card: CardProps) {
   return (
-    <div className="card">
+    <div
+      className="card"
+      style={{
+        backgroundColor: card.background,
+        width: card.widthCard,
+        height: card.heightCard,
+        opacity: card?.opacity,
+      }}
+    >
       <img
         style={{ alignSelf: "center" }}
-        width={100}
-        height={100}
+        width={card.widthImg}
+        height={card.heightImg}
         src={card.src}
         alt={card.alt}
       />

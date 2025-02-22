@@ -6,10 +6,7 @@
     background-color: #030d0f;
     box-sizing: border-box;
 } 
-
-#sobre{  
-    height: 100%; 
-}
+ 
  
 .sobre-container{
     display: flex;
@@ -32,11 +29,10 @@
 }
 
 .title{ 
-    background-image: linear-gradient(to right top, #05d0db, #6ebec41e );
+    background-image: linear-gradient(to right top, #05d0db, #6ebec473 );
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: black; 
+    -webkit-text-fill-color: transparent; 
 }
 
 .sobre-subtitle{
@@ -85,26 +81,51 @@
     font-size: 1.8rem;  
 }
 
-.h-section{   
-    padding-top: 60px; 
+.section{   
+    padding-top: 200px;   
+    display: flex;
+    flex-direction: column;
 }
 
-.title-sessao2{
+.title-sessao{
     display: flex;
     justify-content: center;
 }
-
+  
 .card-section{
     display: flex;
     justify-content: center;
     padding: 50px 0 0 0;
 }
  
-.cards{
-    
+.cards, .projects{ 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 85%;
     gap: 30px;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+#section3, #sessao4{
+    display: flex;
+    justify-content: center; 
+    height: 100%;  
+}
+
+.projects-container{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 70px 0;
+    background-color: #030d0f;
+}
+
+.projects{
+    align-items: center;
+    gap: 100px;
+    width: 100%;
 }

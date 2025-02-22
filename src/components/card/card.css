@@ -1,22 +1,14 @@
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.card{ 
-    opacity: 0;
-    animation: fadeIn 2s forwards;  
+.card{    
     width: 130px;
     height: 130px;
-    background-color:  #ffffff50;
+    background-color:  #fff;
     box-shadow: 0 0 2px 0 #5e5d5d;
     border-radius: 20px; 
     display: flex;
     justify-content: center;  
-    
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    overflow:hidden;     
 }
+ 
