@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
+import github from "../../assets/github.svg";
+import linkedin from "../../assets/logotipo-do-linkedin.png";
 import "./header.css";
 
 function Header() {
@@ -7,11 +9,10 @@ function Header() {
   const refs = useRef<Record<string, HTMLElement | null>>({});
 
   const sections = [
-    { id: "sessao1", label: "Sobre" },
+    { id: "sessao1", label: "Início" },
     { id: "sessao2", label: "Habilidades" },
     { id: "sessao3", label: "Projetos " },
-    { id: "sessao4", label: "Formação " },
-    { id: "sessao5", label: "Contato " },
+    { id: "sessao4", label: "Contato " },
   ];
 
   useEffect(() => {
@@ -35,21 +36,39 @@ function Header() {
 
   return (
     <div className="header">
-      <h2 className="logo">Fernanda Santos</h2>
-      <div>
+      <div className="container">
+        <h2 className="logo">Fernanda Santos</h2>
         <div>
-          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+          <Box sx={{ borderBottom: 1, borderColor: "transparent" }}>
             <Tabs
               value={tabFocus}
               onChange={changeTab}
               textColor="inherit"
-              TabIndicatorProps={{ sx: { backgroundColor: "#0F969C" } }}
+              TabIndicatorProps={{
+                sx: { backgroundColor: "#986dff" },
+              }}
             >
-              {sections.map((section, index) => (
+              {sections.map((section) => (
                 <Tab key={section.id} label={section.label} />
               ))}
             </Tabs>
           </Box>
+        </div>
+        <div className="header-icons">
+          <div>
+            <a href="https://github.com/Fernandadsantos">
+              <img className="icon" src={github} alt="github" />
+            </a>
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/fernanda-santos-864a19232/">
+              <img
+                className="icon linkedinIcon"
+                src={linkedin}
+                alt="linkedin"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

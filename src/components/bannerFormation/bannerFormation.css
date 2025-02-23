@@ -1,0 +1,25 @@
+.banner{
+    color: #fff; 
+    width: 490px;
+    height: 230px;
+    max-height: max-content;
+    background-color: #ffffff25;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;  
+    cursor: pointer;
+}
+ 
+
+.banner-title{
+    width: 100%;  
+    line-height: 5px; 
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}

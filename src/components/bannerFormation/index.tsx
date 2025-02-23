@@ -1,18 +1,30 @@
 import React from "react";
+import "./bannerFormation.css";
+import { Button } from "@mui/material";
 
-interface BannerProps {
+export interface BannerProps {
   title: string;
   date: string;
   institution: string;
+  credential: string;
 }
 
 export default function BannerFormation(props: BannerProps) {
   return (
-    <div>
-      <div>
-        <h3>{props.title}</h3> <p>{props.date}</p>
+    <div className="banner">
+      <div className="banner-title">
+        <h3 style={{ lineHeight: "25px", fontSize: "21px", padding: "0 5px" }}>
+          {props.title}
+        </h3>
+        <p>{props.date}</p>
+        <p>{props.institution}</p>
       </div>
-      <h3>{props.institution}</h3>
+      <div></div>
+      <div>
+        <Button sx={{}} variant="outlined">
+          <a href={props.credential}>Credencial</a>
+        </Button>
+      </div>
     </div>
   );
 }

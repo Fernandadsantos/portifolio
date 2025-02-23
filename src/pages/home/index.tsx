@@ -19,25 +19,27 @@ import shortnerURL from "../../assets/printShortnerURL.png";
 import cineTicket from "../../assets/cine-ticket.png";
 import "./home.css";
 import CardProject from "../../components/cardProject";
+import BannerFormation, { BannerProps } from "../../components/bannerFormation";
 
 interface CardProps {
   src: string;
   alt: string;
 }
 
-function Home() {
-  const btnStyle = {
-    backgroundColor: "rgba(7, 29, 34, 0.88)",
+export const btnStyle = {
+  backgroundColor: "rgba(153, 109, 255, 0.59)",
+  border: "none",
+  color: "#fff",
+  fontSize: "16px",
+  padding: "8px 20px",
+  borderRadius: "20px",
+  "&:hover": {
     border: "none",
-    color: "#fff",
-    padding: "8px 20px",
-    borderRadius: "20px",
-    "&:hover": {
-      backgroundColor: "rgba(10, 143, 150, 0.38)",
-      border: "none",
-      transform: "scale(1.1)",
-    },
-  };
+    transform: "scale(1.1)",
+  },
+};
+
+function Home() {
   const cards: CardProps[] = [
     { src: foto1, alt: "JavaScript" },
     { src: foto2, alt: "HTML" },
@@ -59,6 +61,74 @@ function Home() {
     { src: foto1, alt: "App Movies" },
     { src: cineTicket, alt: "Cine Ticket" },
     { src: foto1, alt: "Coffee shop" },
+  ];
+  const formation: BannerProps[] = [
+    {
+      title: "Bacharelado em Sistemas de informação",
+      date: "2023 - Atualmente",
+      institution: "Universidade Federal de Sergipe (UFS)",
+      credential: "",
+    },
+    {
+      title: "Node js",
+      date: "Out. 2024",
+      institution: "Jornada do Dev",
+      credential:
+        "https://jornadadodev.com.br/certificados/4ee53f39-db72-491f-9921-ba05927349e8",
+    },
+    {
+      title: "Front End development libraries (React and Redux)",
+      date: "Fev. 2024",
+      institution: "FreeCodeCamp",
+      credential:
+        "https://www.freecodecamp.org/certification/FernandaSSantos/front-end-development-libraries",
+    },
+    {
+      title: "JavaScript Algorithms and Data Structures",
+      date: "Dez. 2023",
+      institution: "FreeCodeCamp",
+      credential:
+        "https://www.freecodecamp.org/certification/FernandaSSantos/javascript-algorithms-and-data-structures",
+    },
+    {
+      title: "Responsive Web Design",
+      date: "Nov. 2023",
+      institution: "FreeCodeCamp",
+      credential:
+        "https://www.freecodecamp.org/certification/FernandaSSantos/responsive-web-design",
+    },
+    {
+      title: "BootCamp Backend Java",
+      date: "Out. 2023",
+      institution: "Santander Open Academy",
+      credential: "https://www.dio.me/certificate/0069B48D/share",
+    },
+    {
+      title: "Introdução a banco de dados relacionais (SQL)",
+      date: "Out. 2023",
+      institution: "Digital Innovation One (DIO)",
+      credential:
+        "https://hermes.digitalinnovation.one/certificates/0DC4DF55.pdf",
+    },
+    {
+      title: "Introdução a banco de dados não relacionais (NoSQL)",
+      date: "Out. 2023",
+      institution: "Digital Innovation One (DIO)",
+      credential:
+        "https://hermes.digitalinnovation.one/certificates/A866003B.pdf",
+    },
+    {
+      title: "Versionamento de código - Git e Github",
+      date: "Set. 2023",
+      institution: "Digital Innovation One (DIO)",
+      credential: "https://www.dio.me/certificate/C4A8026A/share",
+    },
+    {
+      title: "Fundamentos da programação orientada a objetos",
+      date: "Set. 2023",
+      institution: "Digital Innovation One (DIO)",
+      credential: "https://www.dio.me/certificate/5B9DC51E/share",
+    },
   ];
 
   useEffect(() => {
@@ -86,19 +156,25 @@ function Home() {
   return (
     <div className="home">
       <Header />
-      <section id="sessao1">
+      <section id="sessao1" className="section">
         <section className="sobre-container">
           <section id="sobre" className="sobre-container-text">
             <div>
               <div className="sobre-text-box">
-                <h2 className="sobre-title">Olá, eu sou a</h2>
-                <h2 className="title">Fernanda Santos</h2>
+                <h2 className="sobre-title">
+                  Olá, eu sou a <span className="title">Fernanda Santos</span>
+                </h2>
                 <p className="sobre-subtitle">Desenvolvedora Front-end</p>
+                <p className="resume">
+                  Estou consolidando meus conhecimentos através de projetos
+                  pessoais, sempre buscando aprender mais para evoluir como
+                  desenvolvedora FullStack.{" "}
+                </p>
               </div>
             </div>
             <Stack direction="row" spacing={4} className="sobre-btn-box">
               <Button sx={btnStyle} variant="outlined">
-                Currículo
+                Currículo CV
               </Button>
               <Button sx={btnStyle} variant="outlined">
                 Entre em contato
@@ -109,28 +185,15 @@ function Home() {
             <div className="foto-perfil"></div>
           </section>
         </section>
-        <section className="text-box-sobre">
-          <h3 className="title-sobre">Sobre</h3>
-          <div className="resume">
-            <p>
-              Sou estudante de Sistemas de Informação na UFS, apaixonada por
-              desenvolvimento front-end. Tenho experiência com React e React
-              Native, Redux, consumo de APIs REST, Material UI, além de
-              JavaScript e TypeScript. Venho consolidando meus conhecimentos
-              através de projetos pessoais e sempre busco aprender mais para
-              evoluir como desenvolvedora FullStack.
-            </p>
-          </div>
-        </section>
       </section>
       <section
         id="sessao2"
         className="section"
-        style={{ paddingBottom: "200px" }}
+        style={{ paddingBottom: "100px" }}
       >
-        <div className="title-sessao">
-          <h2 className="title ">Habilidades</h2>
-        </div>
+        <h2 className="title-section">
+          MINHAS <span className="title-section-span"> HABILIDADES</span>
+        </h2>
         <section className="card-section">
           <div className="cards">
             {cards.map((card, index) => (
@@ -138,8 +201,8 @@ function Home() {
                 key={index}
                 src={card.src}
                 alt={card.alt}
-                heightCard={130}
-                widthCard={130}
+                heightCard={110}
+                widthCard={110}
                 heightImg={100}
                 widthImg={100}
                 background="rgba(0, 0, 0, 0.09)"
@@ -148,10 +211,10 @@ function Home() {
           </div>
         </section>
       </section>
-      <section id="sessao3" className="section" style={{ paddingTop: "70px" }}>
-        <div className="title-sessao">
-          <h2 className="title">Projetos</h2>
-        </div>
+      <section id="sessao3" className="section">
+        <h2 className="title-section">
+          MEUS <span className="title-section-span"> PROJETOS</span>
+        </h2>
         <div className="projects-container">
           <div className="projects">
             {projects.map((project, index) => (
@@ -165,11 +228,24 @@ function Home() {
           </div>
         </div>
       </section>
-      <section id="sessao4" className="section">
+      <section id="sessao4" className="section" style={{ paddingTop: "70px" }}>
         <div className="title-sessao">
           <h2 className="title">Formação</h2>
         </div>
-        <div></div>
+        <div className="box-formation">
+          <div className="formation">
+            {formation.map((e) => {
+              return (
+                <BannerFormation
+                  title={e.title}
+                  date={e.date}
+                  institution={e.institution}
+                  credential={e.credential}
+                />
+              );
+            })}
+          </div>
+        </div>
       </section>
       <section id="sessao5"></section>
     </div>
