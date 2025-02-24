@@ -9,13 +9,11 @@ interface CardProjectProps {
 
 function CardProject(card: CardProjectProps) {
   return (
-    <div className="cardProject">
-      <div className="div-img-cardProjet">
-        <img className="img-cardProject" src={card.src} alt={card.alt} />
-      </div>
-      <div className="div-title-cardProjet">
-        <h3 className="title-cardProjet">{card.title}</h3>
-      </div>
+    <div
+      className="div-img-cardProjet"
+      style={{ backgroundImage: `url(${card.src})` }}
+    >
+      <h3 className="title-cardProjet">{card.title}</h3>
     </div>
   );
 }

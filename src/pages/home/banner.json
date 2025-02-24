@@ -1,0 +1,70 @@
+{
+    "training" : [
+    {
+      "title": "Bacharelado em Sistemas de informação",
+      "date": "Cursando",
+      "institution": "Universidade Federal de Sergipe (UFS)",
+      "credential": ""
+    },
+    {
+      "title": "Node js",
+      "date": "Out. 2024",
+      "institution": "Jornada do Dev",
+      "credential":
+        "https://jornadadodev.com.br/certificados/4ee53f39-db72-491f-9921-ba05927349e8"
+    },
+    {
+      "title": "Front End development libraries (React and Redux)",
+      "date": "Fev. 2024",
+      "institution": "FreeCodeCamp",
+      "credential":
+        "https://www.freecodecamp.org/certification/FernandaSSantos/front-end-development-libraries"
+    },
+    {
+      "title": "JavaScript Algorithms and Data Structures",
+      "date": "Dez. 2023",
+      "institution": "FreeCodeCamp",
+      "credential":
+        "https://www.freecodecamp.org/certification/FernandaSSantos/javascript-algorithms-and-data-structures"
+    },
+    {
+      "title": "Responsive Web Design",
+      "date": "Nov. 2023",
+      "institution": "FreeCodeCamp",
+      "credential":
+        "https://www.freecodecamp.org/certification/FernandaSSantos/responsive-web-design"
+    },
+    {
+      "title": "BootCamp Backend Java",
+      "date": "Out. 2023",
+      "institution": "Santander Open Academy",
+      "credential": "https://www.dio.me/certificate/0069B48D/share"
+    },
+    {
+      "title": "Introdução a banco de dados relacionais (SQL)",
+      "date": "Out. 2023",
+      "institution": "Digital Innovation One (DIO)",
+      "credential":
+        "https://hermes.digitalinnovation.one/certificates/0DC4DF55.pdf"
+    },
+    {
+      "title": "Introdução a banco de dados não relacionais (NoSQL)",
+      "date": "Out. 2023",
+      "institution": "Digital Innovation One (DIO)",
+      "credential":
+        "https://hermes.digitalinnovation.one/certificates/A866003B.pdf"
+    },
+    {
+      "title": "Versionamento de código - Git e Github",
+      "date": "Set. 2023",
+      "institution": "Digital Innovation One (DIO)",
+      "credential": "https://www.dio.me/certificate/C4A8026A/share"
+    },
+    {
+      "title": "Fundamentos da programação orientada a objetos",
+      "date": "Set. 2023",
+      "institution": "Digital Innovation One (DIO)",
+      "credential": "https://www.dio.me/certificate/5B9DC51E/share"
+    }
+  ]
+}

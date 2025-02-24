@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../components/header";
-import { Button, Stack } from "@mui/material";
+import { Button, Fab, Stack } from "@mui/material";
 import Card from "../../components/card";
 import foto1 from "../../assets/js.svg";
 import foto2 from "../../assets/icons8-html.svg";
@@ -15,15 +15,27 @@ import foto10 from "../../assets/logoM.png";
 import foto11 from "../../assets/icons8-mongodb.svg";
 import pomodoro from "../../assets/printPOMODORO.png";
 import landingPage from "../../assets/landingPage.png";
-import shortnerURL from "../../assets/printShortnerURL.png";
 import cineTicket from "../../assets/cine-ticket.png";
-import "./home.css";
 import CardProject from "../../components/cardProject";
-import BannerFormation, { BannerProps } from "../../components/bannerFormation";
+import BannerFormation from "../../components/bannerFormation";
+import bannerObj from "./banner.json";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import EmailIcon from "@mui/icons-material/Email";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import "./home.css";
 
-interface CardProps {
+const { training } = bannerObj;
+export interface CardProps {
   src: string;
   alt: string;
+}
+export interface Training {
+  title: string;
+  credential: string;
+  date: string;
+  institution: string;
 }
 
 export const btnStyle = {
@@ -40,6 +52,7 @@ export const btnStyle = {
 };
 
 function Home() {
+  const [isVisible, setIsVisible] = useState(false);
   const cards: CardProps[] = [
     { src: foto1, alt: "JavaScript" },
     { src: foto2, alt: "HTML" },
@@ -55,81 +68,22 @@ function Home() {
   ];
   const projects: CardProps[] = [
     { src: landingPage, alt: "Landing Page" },
-    { src: foto1, alt: "Books API Rest" },
     { src: pomodoro, alt: "Pomodoro" },
-    { src: shortnerURL, alt: "Shortner URL" },
-    { src: foto1, alt: "App Movies" },
     { src: cineTicket, alt: "Cine Ticket" },
-    { src: foto1, alt: "Coffee shop" },
   ];
-  const formation: BannerProps[] = [
-    {
-      title: "Bacharelado em Sistemas de informação",
-      date: "2023 - Atualmente",
-      institution: "Universidade Federal de Sergipe (UFS)",
-      credential: "",
-    },
-    {
-      title: "Node js",
-      date: "Out. 2024",
-      institution: "Jornada do Dev",
-      credential:
-        "https://jornadadodev.com.br/certificados/4ee53f39-db72-491f-9921-ba05927349e8",
-    },
-    {
-      title: "Front End development libraries (React and Redux)",
-      date: "Fev. 2024",
-      institution: "FreeCodeCamp",
-      credential:
-        "https://www.freecodecamp.org/certification/FernandaSSantos/front-end-development-libraries",
-    },
-    {
-      title: "JavaScript Algorithms and Data Structures",
-      date: "Dez. 2023",
-      institution: "FreeCodeCamp",
-      credential:
-        "https://www.freecodecamp.org/certification/FernandaSSantos/javascript-algorithms-and-data-structures",
-    },
-    {
-      title: "Responsive Web Design",
-      date: "Nov. 2023",
-      institution: "FreeCodeCamp",
-      credential:
-        "https://www.freecodecamp.org/certification/FernandaSSantos/responsive-web-design",
-    },
-    {
-      title: "BootCamp Backend Java",
-      date: "Out. 2023",
-      institution: "Santander Open Academy",
-      credential: "https://www.dio.me/certificate/0069B48D/share",
-    },
-    {
-      title: "Introdução a banco de dados relacionais (SQL)",
-      date: "Out. 2023",
-      institution: "Digital Innovation One (DIO)",
-      credential:
-        "https://hermes.digitalinnovation.one/certificates/0DC4DF55.pdf",
-    },
-    {
-      title: "Introdução a banco de dados não relacionais (NoSQL)",
-      date: "Out. 2023",
-      institution: "Digital Innovation One (DIO)",
-      credential:
-        "https://hermes.digitalinnovation.one/certificates/A866003B.pdf",
-    },
-    {
-      title: "Versionamento de código - Git e Github",
-      date: "Set. 2023",
-      institution: "Digital Innovation One (DIO)",
-      credential: "https://www.dio.me/certificate/C4A8026A/share",
-    },
-    {
-      title: "Fundamentos da programação orientada a objetos",
-      date: "Set. 2023",
-      institution: "Digital Innovation One (DIO)",
-      credential: "https://www.dio.me/certificate/5B9DC51E/share",
-    },
-  ];
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   useEffect(() => {
     const elements = document.querySelectorAll(".card");
@@ -156,6 +110,18 @@ function Home() {
   return (
     <div className="home">
       <Header />
+      <div
+        className="floating-btn"
+        style={{ display: isVisible ? "flex" : "none" }}
+      >
+        <Fab
+          sx={{ backgroundColor: "#ab8df0" }}
+          aria-label="add"
+          onClick={() => scrollToTop()}
+        >
+          <KeyboardArrowUpIcon sx={{ height: "30px", width: "30px" }} />
+        </Fab>
+      </div>
       <section id="sessao1" className="section">
         <section className="sobre-container">
           <section id="sobre" className="sobre-container-text">
@@ -211,7 +177,11 @@ function Home() {
           </div>
         </section>
       </section>
-      <section id="sessao3" className="section">
+      <section
+        id="sessao3"
+        className="section"
+        style={{ paddingBottom: "100px" }}
+      >
         <h2 className="title-section">
           MEUS <span className="title-section-span"> PROJETOS</span>
         </h2>
@@ -228,13 +198,13 @@ function Home() {
           </div>
         </div>
       </section>
-      <section id="sessao4" className="section" style={{ paddingTop: "70px" }}>
-        <div className="title-sessao">
-          <h2 className="title">Formação</h2>
-        </div>
+      <section id="sessao4" className="section">
+        <h2 className="title-section">
+          MINHA <span className="title-section-span">FORMAÇÃO</span>
+        </h2>
         <div className="box-formation">
           <div className="formation">
-            {formation.map((e) => {
+            {training.map((e) => {
               return (
                 <BannerFormation
                   title={e.title}
@@ -247,7 +217,25 @@ function Home() {
           </div>
         </div>
       </section>
-      <section id="sessao5"></section>
+      <section id="sessao5">
+        <h2 className="title-section">
+          ENTRE EM <span className="title-section-span">CONTATO</span> COMIGO
+        </h2>
+        <div className="div-contact">
+          <a href="mailto:Fernandassilvasantoss@gmail.com">
+            <EmailIcon sx={{}} />
+          </a>
+          <a href="mailto:Fernandassilvasantoss@gmail.com">
+            <InstagramIcon />
+          </a>
+          <a href="mailto:Fernandassilvasantoss@gmail.com">
+            <LinkedInIcon />
+          </a>
+          <a href="mailto:Fernandassilvasantoss@gmail.com">
+            <GitHubIcon />
+          </a>
+        </div>
+      </section>
     </div>
   );
 }

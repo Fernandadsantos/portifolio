@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Box, Tab, Tabs } from "@mui/material";
-import github from "../../assets/github.svg";
-import linkedin from "../../assets/logotipo-do-linkedin.png";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import "./header.css";
 
 function Header() {
@@ -12,7 +12,8 @@ function Header() {
     { id: "sessao1", label: "Início" },
     { id: "sessao2", label: "Habilidades" },
     { id: "sessao3", label: "Projetos " },
-    { id: "sessao4", label: "Contato " },
+    { id: "sessao4", label: "Formação " },
+    { id: "sessao5", label: "Contato " },
   ];
 
   useEffect(() => {
@@ -37,7 +38,9 @@ function Header() {
   return (
     <div className="header">
       <div className="container">
-        <h2 className="logo">Fernanda Santos</h2>
+        <a className="logo" href="/">
+          Fernanda Santos
+        </a>
         <div>
           <Box sx={{ borderBottom: 1, borderColor: "transparent" }}>
             <Tabs
@@ -57,16 +60,12 @@ function Header() {
         <div className="header-icons">
           <div>
             <a href="https://github.com/Fernandadsantos">
-              <img className="icon" src={github} alt="github" />
+              <GitHubIcon sx={{ fontSize: "2.2rem" }} />
             </a>
           </div>
           <div>
             <a href="https://www.linkedin.com/in/fernanda-santos-864a19232/">
-              <img
-                className="icon linkedinIcon"
-                src={linkedin}
-                alt="linkedin"
-              />
+              <LinkedInIcon sx={{ fontSize: "2.5rem" }} />
             </a>
           </div>
         </div>
