@@ -1,0 +1,9 @@
+{
+    "sections" : [
+        { "id": "sessao1", "label": "Início" },
+        { "id": "sessao2", "label": "Habilidades" },
+        { "id": "sessao3", "label": "Projetos " },
+        { "id": "sessao4", "label": "Formação " },
+        { "id": "sessao5", "label": "Contato " } 
+      ] 
+}

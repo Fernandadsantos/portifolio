@@ -11,21 +11,23 @@ export interface BannerProps {
 
 export default function BannerFormation(props: BannerProps) {
   return (
-    <a href={props.credential} target="_blank" rel="noreferrer">
-      <div className="banner">
-        <div className="banner-text">
-          <h3
-            style={{ lineHeight: "25px", fontSize: "21px", padding: "0 5px" }}
-          >
-            {props.title}
-          </h3>
-          <p>{props.date}</p>
-          <p>{props.institution}</p>
-        </div>
-        <h2 className="banner-title">
-          Credencial <ArrowOutwardIcon />
-        </h2>
+    <div className="banner">
+      <div className="banner-text">
+        <h3 style={{ lineHeight: "25px", fontSize: "21px", padding: "0 5px" }}>
+          {props.title}
+        </h3>
+        <p>{props.date}</p>
+        <p style={{ fontSize: "18px" }}>{props.institution}</p>
       </div>
-    </a>
+      {!props.credential ? (
+        <h2 className="banner-title">Curso em andamento</h2>
+      ) : (
+        <h2 className="banner-title">
+          <a href={props.credential} target="_blank" rel="noreferrer">
+            Credencial <ArrowOutwardIcon />
+          </a>
+        </h2>
+      )}
+    </div>
   );
 }

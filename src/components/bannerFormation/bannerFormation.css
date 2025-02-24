@@ -13,7 +13,7 @@
     cursor: pointer;
     position: relative; 
     background-position:   100% 0%;
-    transition: 8s;
+    transition: .8s;
     background-size:cover; 
 } 
 
@@ -24,15 +24,12 @@
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: #ab8df0;
 }
   
 
-.banner-title{
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
+.banner-title{ 
+    position: absolute; 
     width: 100%;
     height: 100%;
     background-color: #000000b9;
@@ -45,13 +42,12 @@ a{
     font-weight: 600;
     color: #ab8df0;
     opacity: 0;
-    transition: .5s; 
+    transition: .6s; 
     gap:20px;
 }
 
 .banner:hover{     
-    background-position:  0% 100%;
-    transition: 8s; 
+    background-position:  0% 100%; 
     .banner-title{      
         opacity: 1; 
     }

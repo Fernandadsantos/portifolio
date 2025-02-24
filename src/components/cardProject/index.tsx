@@ -3,18 +3,22 @@ import "./cardProject.css";
 
 interface CardProjectProps {
   src: string;
-  alt: string;
   title: string;
+  href: string;
 }
 
 function CardProject(card: CardProjectProps) {
   return (
-    <div
-      className="div-img-cardProjet"
-      style={{ backgroundImage: `url(${card.src})` }}
-    >
-      <h3 className="title-cardProjet">{card.title}</h3>
-    </div>
+    <a href={card.href} target="_blank" rel="noreferrer">
+      <div
+        className="div-img-cardProjet"
+        style={{ backgroundImage: `url(${card.src})` }}
+      >
+        <div className="title-cardProjet">
+          <h3 className="h3-project">{card.title}</h3>
+        </div>
+      </div>
+    </a>
   );
 }
 
