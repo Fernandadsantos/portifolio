@@ -14,7 +14,7 @@ function Header() {
     sections.forEach(({ id }) => {
       refs.current[id] = document.getElementById(id);
     });
-  }, []);
+  }, [sections]);
 
   const changeTab = (event: React.SyntheticEvent, newValue: number) => {
     setTabFocus(newValue);
