@@ -1,7 +1,7 @@
 {
   "name": "my_portifolio",
   "version": "0.1.0",
-  "homepage": "https://github.com/Fernandadsantos/portifolio",
+  "homepage": "https://github.com/Fernandadsantos/portifolio/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",
