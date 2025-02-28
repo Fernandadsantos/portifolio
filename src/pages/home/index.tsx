@@ -166,7 +166,7 @@ function Home() {
       </div>
       <section id="sessao1" className="section">
         <section className="sobre-container">
-          <section id="sobre" className="sobre-container-text">
+          <section id="sobre">
             <div>
               <div className="sobre-text-box">
                 <h2 className="sobre-title">
@@ -180,7 +180,12 @@ function Home() {
                 </p>
               </div>
             </div>
-            <Stack direction="row" spacing={4} className="sobre-btn-box">
+            <Stack
+              direction="row"
+              spacing={4}
+              className="sobre-btn-box"
+              alignSelf="center"
+            >
               <Button sx={btnStyle} variant="outlined" onClick={handleDownload}>
                 Currículo CV
               </Button>

@@ -1,183 +1,220 @@
-body{ 
-    background-color: #010102;  
-    color: #fff; 
-    font-family: "Poppins", serif; 
-}
-
-.home{  
-    margin:  0; 
-    padding: 0;
+.home {  
+    margin: 0; 
+    padding: 0 ;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;  
 } 
- 
   
-.sobre-container{
-    display: flex;
+.sobre-container {
+    display: flex;  
     align-items: center;
     justify-content: space-between;
-    padding: 10rem 0 5rem 0 ; 
+    padding: 20vh 0 5vh 0;
     height: 50vh; 
 }
- 
- 
-.sobre-title,  .title {
-    font-size: 3rem;
+  
+.sobre-title, .title {
+    font-size: 3vw;
     font-weight: 500;
-    line-height: 3.8rem;
+    line-height: 4vw;
     margin: 0;
 }
 
-.title{ 
-    color: #ab8df0;
-    font-weight: 500;  
+.title { 
+    color: #ab8df0; 
 }
 
-.sobre-subtitle{
-    font-size: 1.3rem;
+.sobre-subtitle {
+    font-size: 1.5vw;
     font-weight: 400;
     color: #828282;
     margin: 0;
 }
 
-.sobre-text-box{
+.sobre-text-box {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.sobre-btn-box{
-    margin-top: 30px; 
+.sobre-btn-box {
+    margin-top: 2vh;
 }
  
-.foto-perfil{
+.foto-perfil {
     width: 350px;
-    height: 350px; 
-    border-radius: 50%; 
-    background-size:cover;
-    background-position:  100%;   
+    height: 350px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;   
 }
  
-
-.text-box-resume{ 
-    width: 100%; 
-    height: 360px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column; 
-}
-
-.title-sobre{
-    margin: 0;
-    font-size: 2.3rem;
-    letter-spacing: 1.9px;
-    font-weight: 600; 
-}
-
-.resume{    
+.resume {    
     width: 88%;
     color: #cac8c8;
-    font-size: 22px;   
+    font-size: 1.2vw;
 }
 
-.title-section{
-    font-size: 40px;
+.title-section {
+    font-size: 3vw;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    gap: 10px;
+    margin-top: 10vh;
+    gap: 1vw;
 }
 
-.title-section-span{ 
+.title-section-span { 
+    font-size: 3vw;
     color: #ab8df0;
 }
 
-.section{   
-    width: 1344px;  
+.section {   
+    width: 90vw;  
     margin: auto;
-}
-
-.title-sessao{
-    display: flex;
-    justify-content: center;
-}
+} 
   
-.card-section{
+.card-section {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 10vh;
 }
  
-.cards, .projects{ 
+.cards, .projects { 
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
-    gap: 30px;
+    gap: 2vw;
 }
 
 .card.show {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 #section3 {
     display: flex;
     justify-content: center; 
-    height: 100%;  
+    height: 100vh;  
 }
 
-.projects-container{
+.projects-container {
     display: flex;
-    justify-content: center; 
+    justify-content: center;  
 }
 
-.projects{
+.projects {
     align-items: center;
-    gap: 100px;
+    gap: 5vw;
     width: 100%;
 }
 
 #sessao4 { 
-    height: 100%; 
+    height: max-content; 
 }
 
-.box-formation{
-    padding-top: 50px;
+.box-formation {
+    padding-top: 5vh;
+    height: 100%;
 }
 
-.formation{
+.formation {
     display: flex;
     justify-content: center;
     width: 100%;
-    display:flex ;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 3vw; 
+
 }
  
-.floating-btn{
+.floating-btn {
     position: fixed;
-    bottom: 30px;
-    right: 50px; 
+    bottom: 3vh;
+    right: 4vw; 
 }
 
-#sessao5{
-    margin-top: 100px; 
-    margin-bottom: 100px;
+#sessao5 {
+    margin-top: 10vh; 
+    margin-bottom: 10vh;
     border-top: 1px solid #ab8df0;
 }
 
-.div-contact{ 
+.div-contact { 
     display: flex;
     justify-content: center;
-    gap: 30px; 
+    gap: 2vw; 
+}
 
-    a:hover{
-        transform: scale(1.1);
+.div-contact a:hover {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 1200px) {
+
+    #sessao1{
+        margin-top: 100px;
     }
+
+    #sobre{
+        display: flex;
+        flex-direction: column;   
+    }
+    
+    .sobre-container {
+        flex-wrap: wrap-reverse;  
+        justify-content: center; 
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .sobre-text-box { 
+        align-items: center;
+    }
+
+    .sobre-subtitle{  
+        font-size: 1.4em;
+    }
+
+    .resume{  
+        font-size: 1.3em;
+    }
+
+    .title-section, .sobre-title, .title-section-span, .title  {
+        font-size: 5vw; 
+    }
+ 
+}
+
+@media ( (min-width: 500px)  and  ( max-width: 1200px)){
+    #sessao1{
+        margin-top: 150px;
+    }
+
+    .foto-perfil { 
+        width: 300px;
+        height: 300px;  
+    }
+
+    .title-section, .title-section-span   {
+        font-size: 7vw;  
+    }
+
+    #sessao5{
+        .title-section, .title-section-span   {
+            font-size: 6vw;  
+        }
+    }
+ 
+}
+
+@media ( (min-width: 1200px)  ){
+    .resume{  
+        font-size: 1.4em;
+    }
+ 
 }
