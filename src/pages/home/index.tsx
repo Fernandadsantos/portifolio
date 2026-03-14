@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Header from "../../components/header";
-import { Button, Fab, Stack } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 import Card from "../../components/card";
 import CardProject from "../../components/cardProject";
 import BannerFormation from "../../components/bannerFormation";
 import bannerObj from "../../json/banner.json";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -28,7 +27,10 @@ import mongoDB from "../../assets/icons8-mongodb.svg";
 import shortnerURL from "../../assets/shortnetURL.png";
 import apiBooks from "../../assets/apiRest.png";
 import coffeeShop from "../../assets/coffeeShop.jpeg";
+import clyo from '../../assets/Clyo.jpeg';
+import curriculoPath from '../../assets/curriculo.pdf';
 import "./home.css";
+import FloatingBtn from "../../components/floatingBtn";
 
 const { training } = bannerObj;
 export interface Training {
@@ -46,17 +48,17 @@ export const btnStyle = {
   backgroundColor: "rgba(153, 109, 255, 0.59)",
   border: "none",
   color: "#fff",
-  fontSize: "16px",
+  fontSize: "0.8rem",
   padding: "8px 20px",
   borderRadius: "20px",
   "&:hover": {
     border: "none",
     transform: "scale(1.1)",
   },
+  fontWeight: 'bold',
 };
 
 function Home() {
-  const [isVisible, setIsVisible] = useState(false);
 
   const cards: CardProps[] = [
     { src: js, alt: "JavaScript" },
@@ -75,18 +77,22 @@ function Home() {
   const projects = [
     {
       src: landingPage,
-      alt: "Landing Page Positivus",
+      alt: "Landing Page Positivus com React",
       href: "https://fernandadsantos.github.io/landing-page/",
     },
     {
       src: pomodoro,
-      alt: "React App Pomodoro",
+      alt: "App Pomodoro com React",
       href: "https://fernandadsantos.github.io/react-app-pomodoro/",
     },
-    { src: cineTicket, alt: "Cine Ticket - Compra de ingressos", href: "" },
+    {
+      src: cineTicket,
+      alt: "App de cinema com React",
+      href: ""
+    },
     {
       src: shortnerURL,
-      alt: "Encurtador de URL",
+      alt: "Encurtador de URL com JS, MongoDB e Express",
       href: "https://github.com/Fernandadsantos/shortenerURL",
     },
     {
@@ -99,28 +105,19 @@ function Home() {
       alt: "Ecommerce de café com React Native (Em andamento)",
       href: "",
     },
+    {
+      src: clyo,
+      alt: "MVP de monitoramento de ciclos menstruais em React Native",
+      href: "https://github.com/Fernandadsantos/clyo",
+    }
   ];
 
-  const handleDownload = () => {
+  const handleViewPDF = () => {
     const link = document.createElement("a");
-    link.href = "/curriculo.pdf";
-    link.download = "Curriculo.pdf";
-    document.body.appendChild(link);
+    link.href = curriculoPath;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     link.click();
-    document.body.removeChild(link);
-  };
-
-  useEffect(() => {
-    const toggleVisibility = () => {
-      setIsVisible(window.scrollY > 300);
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const scrollToBottom = () => {
@@ -152,18 +149,7 @@ function Home() {
   return (
     <div className="home">
       <Header />
-      <div
-        className="floating-btn"
-        style={{ display: isVisible ? "flex" : "none" }}
-      >
-        <Fab
-          sx={{ backgroundColor: "#ab8df0" }}
-          aria-label="add"
-          onClick={() => scrollToTop()}
-        >
-          <KeyboardArrowUpIcon sx={{ height: "30px", width: "30px" }} />
-        </Fab>
-      </div>
+      <FloatingBtn />
       <section id="sessao1" className="section">
         <section className="sobre-container">
           <section id="sobre">
@@ -182,11 +168,11 @@ function Home() {
             </div>
             <Stack
               direction="row"
-              spacing={4}
+              spacing={2}
               className="sobre-btn-box"
               alignSelf="center"
             >
-              <Button sx={btnStyle} variant="outlined" onClick={handleDownload}>
+              <Button sx={btnStyle} variant="outlined" onClick={handleViewPDF}>
                 Currículo CV
               </Button>
               <Button
@@ -209,7 +195,6 @@ function Home() {
       <section
         id="sessao2"
         className="section"
-        style={{ paddingBottom: "120px" }}
       >
         <h2 className="title-section">
           MINHAS <span className="title-section-span"> HABILIDADES</span>
@@ -272,10 +257,10 @@ function Home() {
           ENTRE EM <span className="title-section-span">CONTATO</span> COMIGO
         </h2>
         <div className="div-contact">
-          <a href="mailto:Fernandassilvasantoss@gmail.com">
+          <a href="mailto:fernanda.devsantos@gmail.com">
             <EmailIcon sx={{ fontSize: "40px" }} />
           </a>
-          <a href="https://www.linkedin.com/in/fernanda-santos-864a19232/">
+          <a href="https://www.linkedin.com/in/fernanda-silvade-santos/">
             <LinkedInIcon sx={{ fontSize: "40px" }} />
           </a>
           <a href="https://github.com/Fernandadsantos">

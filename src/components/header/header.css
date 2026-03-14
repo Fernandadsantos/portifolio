@@ -55,12 +55,12 @@ a:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 1200px) {
+/* @media (min-width: 1930px) {
     .header {
-        flex-direction: column; 
+        flex-direction: column;
         height: auto;
         padding: 2vh 0;
-        gap: 2vh; 
+        gap: 2vh;
     }
     
     .container {
@@ -69,19 +69,27 @@ a:hover {
         align-items: center;
         gap: 1vh;
     }
+
+    .tabs{
+        display: flex;
+    }
+    
+    .header-icons {
+        display: none;
+    }
+} */
+
+@media (min-width: 300px) and (max-width: 1200px){
+    .tabs{
+        display: none;
+    }
     
     .logo {
         font-size: 4vw;
     }
-    
-    .header-icons {
-        gap: 4vw;
-    }
-}
 
-@media (min-width: 500px){
-    .header-icons {
-        display: none;
+    .container{
+        flex-direction: row;
+        justify-content: space-around;
     }
- 
 }

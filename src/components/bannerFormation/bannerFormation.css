@@ -1,5 +1,5 @@
 .banner{
-    color: #fff; 
+    color: #fff;
     width: 490px;
     height: 230px;
     max-height: max-content;
@@ -8,28 +8,27 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    text-align: center;  
+    justify-content: center;
+    text-align: center;
     cursor: pointer;
-    position: relative; 
+    position: relative;
     background-position:   100% 0%;
     transition: .8s;
-    background-size:cover; 
-} 
+    background-size:cover;
+}
 
 .banner-text{
-    width: 100%;  
-    line-height: 5px; 
+    width: 100%;
+    line-height: 5px;
 }
 
 a{
     text-decoration: none;
     color: #ab8df0;
 }
-  
 
-.banner-title{ 
-    position: absolute; 
+.banner-title{
+    position: absolute;
     width: 100%;
     height: 100%;
     background-color: #000000b9;
@@ -42,13 +41,14 @@ a{
     font-weight: 600;
     color: #ab8df0;
     opacity: 0;
-    transition: .6s; 
+    transition: .6s;
     gap:20px;
 }
 
-.banner:hover{     
-    background-position:  0% 100%; 
-    .banner-title{      
-        opacity: 1; 
+.banner:hover{
+    background-position:  0% 100%;
+    .banner-title{
+        opacity: 1;
     }
 }
+

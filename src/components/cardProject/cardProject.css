@@ -1,27 +1,27 @@
-.div-img-cardProjet{   
-  width: 360px;
-  height: 460px;
-  background-size:cover;
-  cursor: pointer;
-  border-radius: 20px;
-  position: relative; 
-  background-position:   100% 0%;
-  transition: 8s;
-  border: 1px solid #ab8df060;
-  box-sizing: border-box;
-} 
+.div-img-cardProjet{
+    width: 360px;
+    height: 460px;
+    background-size:cover;
+    cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    background-position:   100% 0%;
+    transition: 8s;
+    border: 1px solid #ab8df060;
+    box-sizing: border-box;
+}
 
-.div-img-cardProjet:hover{   
+.div-img-cardProjet:hover{
     background-position:  0% 100%;
     transition: 8s;
     border: none;
-    .title-cardProjet{    
+    .title-cardProjet{
         box-shadow: 0 0 20px #ffffff78;
-        opacity: 1; 
+        opacity: 1;
     }
 }
 
-.title-cardProjet{   
+.title-cardProjet{
     margin: 0;
     position: absolute;
     top: 0;
@@ -37,21 +37,28 @@
     font-weight: 600;
     color: #FFF;
     opacity: 0;
-    transition: .5s; 
+    transition: .5s;
 }
- 
+
 .cardProject:hover{
     
-    .title-cardProjet{   
+    .title-cardProjet{
         align-self: top;
-        display: block; 
-        width: 400px; 
+        display: block;
+        width: 400px;
         height: 100%;
-        background-color: #eeeaea7c;  
+        background-color: #eeeaea7c;
     }
-} 
+}
 
-.h3-project{ 
+.h3-project{
     text-align: center;
     width: 300px;
+}
+
+@media (max-width: 530px) {
+    .div-img-cardProjet{
+        width: 300px;
+        height: 400px;
+    }
 }

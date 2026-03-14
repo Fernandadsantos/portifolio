@@ -33,7 +33,7 @@ function Header() {
         <a className="logo" href="/">
           Fernanda Santos
         </a>
-        <div>
+        <div className="tabs">
           <Box sx={{ borderBottom: 1, borderColor: "transparent" }}>
             <Tabs
               value={tabFocus}
