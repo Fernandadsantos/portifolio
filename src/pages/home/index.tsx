@@ -29,8 +29,9 @@ import apiBooks from "../../assets/apiRest.png";
 import coffeeShop from "../../assets/coffeeShop.jpeg";
 import clyo from '../../assets/Clyo.jpeg';
 import curriculoPath from '../../assets/curriculo.pdf';
-import "./home.css";
 import FloatingBtn from "../../components/floatingBtn";
+import clinicOps from '../../assets/clinicops.png';
+import "./home.css";
 
 const { training } = bannerObj;
 export interface Training {
@@ -76,19 +77,29 @@ function Home() {
 
   const projects = [
     {
-      src: landingPage,
-      alt: "Landing Page Positivus com React",
-      href: "https://fernandadsantos.github.io/landing-page/",
-    },
-    {
       src: pomodoro,
       alt: "App Pomodoro com React",
       href: "https://fernandadsantos.github.io/react-app-pomodoro/",
     },
     {
+      src: clyo,
+      alt: "MVP de monitoramento de ciclos menstruais em React Native",
+      href: "https://github.com/Fernandadsantos/clyo",
+    },
+    {
+      src: clinicOps,
+      alt: "Plantaforma multi-tenet de gerenciamento de clinicas com React e Java (em andamento)",
+      href: "https://fernandadsantos.github.io/clinic-SaaS/"
+    },
+    {
+      src: landingPage,
+      alt: "Landing Page Positivus com React",
+      href: "https://fernandadsantos.github.io/landing-page/",
+    },
+    {
       src: cineTicket,
       alt: "App de cinema com React",
-      href: ""
+      href: "https://github.com/Fernandadsantos/cine-ticket"
     },
     {
       src: shortnerURL,
@@ -103,13 +114,9 @@ function Home() {
     {
       src: coffeeShop,
       alt: "Ecommerce de café com React Native (Em andamento)",
-      href: "",
+      href: "https://github.com/Fernandadsantos/CoffeShop",
     },
-    {
-      src: clyo,
-      alt: "MVP de monitoramento de ciclos menstruais em React Native",
-      href: "https://github.com/Fernandadsantos/clyo",
-    }
+
   ];
 
   const handleViewPDF = () => {
