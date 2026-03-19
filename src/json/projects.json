@@ -1,0 +1,49 @@
+{
+  "projects": [
+    {
+      "src": "printPOMODORO.png",
+      "alt": "App Pomodoro com React",
+      "href": "https://fernandadsantos.github.io/react-app-pomodoro/"
+    },
+    {
+      "src": "clinicops.png",
+      "alt": "Plantaforma multi-tenet de gerenciamento de clinicas com React e Java (em andamento)",
+      "href": "https://fernandadsantos.github.io/clinic-SaaS/"
+    },
+    {
+      "src": "store-manager.jpeg",
+      "alt": "App mobile de gerenciamento de lojas e estoque com React Native",
+      "href": "https://github.com/Fernandadsantos/store-manager"
+    },
+    {
+      "src": "Clyo.jpeg",
+      "alt": "MVP de monitoramento de ciclos menstruais em React Native",
+      "href": "https://github.com/Fernandadsantos/clyo"
+    },
+    {
+      "src": "landingPage.png",
+      "alt": "Landing Page Positivus com React",
+      "href": "https://fernandadsantos.github.io/landing-page/"
+    },
+    {
+      "src": "cine-ticket.png",
+      "alt": "App de cinema com React",
+      "href": "https://github.com/Fernandadsantos/cine-ticket"
+    },
+    {
+      "src": "shortnetURL.png",
+      "alt": "Encurtador de URL com JS, MongoDB e Express",
+      "href": "https://github.com/Fernandadsantos/shortenerURL"
+    },
+    {
+      "src": "apiRest.png",
+      "alt": "API REST de livros com Nodejs",
+      "href": "https://github.com/Fernandadsantos/BOOKS-API-REST"
+    },
+    {
+      "src": "coffeeShop.jpeg",
+      "alt": "Ecommerce de café com React Native (Em andamento)",
+      "href": "https://github.com/Fernandadsantos/CoffeShop"
+    }
+  ]
+}

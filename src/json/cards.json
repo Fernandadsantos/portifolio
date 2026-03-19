@@ -1,0 +1,18 @@
+{
+  "cards": [
+    { "src": "js.svg", "alt": "JavaScript" },
+    { "src": "html.svg", "alt": "HTML" },
+    { "src": "git.svg", "alt": "Git" },
+    { "src": "node.svg", "alt": "NodeJS" },
+    { "src": "java.svg", "alt": "Java" },
+    { "src": "react.svg", "alt": "React" },
+    { "src": "angular.svg", "alt": "Angular" },
+    { "src": "c.svg", "alt": "C" },
+    { "src": "css.svg", "alt": "Css" },
+    { "src": "sass.svg", "alt": "Sass" },
+    { "src": "logoM.png", "alt": "Material UI" },
+    { "src": "tailwind.svg", "alt": "Tailwind" },
+    { "src": "mongodb.svg", "alt": "MongoDB" },
+    { "src": "spring-boot.svg", "alt": "Spring Boot" }
+  ]
+}
