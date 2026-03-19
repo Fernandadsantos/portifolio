@@ -55,37 +55,13 @@ a:hover {
     transform: scale(1.1);
 }
 
-/* @media (min-width: 1930px) {
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 2vh 0;
-        gap: 2vh;
-    }
-    
-    .container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 1vh;
-    }
-
-    .tabs{
-        display: flex;
-    }
-    
-    .header-icons {
-        display: none;
-    }
-} */
-
 @media (min-width: 300px) and (max-width: 1200px){
     .tabs{
         display: none;
     }
     
     .logo {
-        font-size: 4vw;
+        font-size: 1.3rem;
     }
 
     .container{

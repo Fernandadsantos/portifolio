@@ -1,16 +1,6 @@
 import React from "react";
 import "./card.css";
-
-interface CardProps {
-  src: string;
-  alt: string;
-  widthImg?: number;
-  heightImg?: number;
-  widthCard?: number;
-  heightCard?: number;
-  opacity?: number;
-  background?: string;
-}
+import { CardProps } from "../../interfaces/interfaces";
 
 function Card(card: CardProps) {
   return (
@@ -18,16 +8,12 @@ function Card(card: CardProps) {
       className="card"
       style={{
         backgroundColor: card.background,
-        width: card.widthCard,
-        height: card.heightCard,
         opacity: card?.opacity,
       }}
     >
       <img
-        style={{ alignSelf: "center" }}
-        width={card.widthImg}
-        height={card.heightImg}
-        src={card.src}
+        className="img-card"
+        src={`${process.env.PUBLIC_URL}/icons/${card.src}`}
         alt={card.alt}
       />
     </div>
